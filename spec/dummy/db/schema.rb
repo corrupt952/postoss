@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418170644) do
+ActiveRecord::Schema.define(version: 20150418175813) do
 
   create_table "postoss_categories", force: :cascade do |t|
     t.string   "name",                             null: false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150418170644) do
     t.datetime "updated_at",             null: false
   end
 
+  add_index "postoss_posts", ["category_id"], name: "index_postoss_posts_on_category_id"
   add_index "postoss_posts", ["unique_id"], name: "index_postoss_posts_on_unique_id", unique: true
 
 end

@@ -21,7 +21,7 @@ class InitialSchema < ActiveRecord::Migration
     end
     add_index :postoss_posts, :category_id
     add_index :postoss_posts, :unique_id, unique: true
-    add_foreign_key :postoss_posts, :categories
+    add_foreign_key :postoss_posts, :postoss_categories, column: :category_id
 
     create_table :postoss_images do |t|
       t.string :unique_id, null: false, limit: 16
