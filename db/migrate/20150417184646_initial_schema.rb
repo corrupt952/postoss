@@ -19,6 +19,7 @@ class InitialSchema < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :postoss_posts, :category_id
     add_index :postoss_posts, :unique_id, unique: true
     add_foreign_key :postoss_posts, :categories
 
