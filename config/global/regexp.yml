@@ -1,0 +1,2 @@
+default:
+  slug: !ruby/regexp '/\A[0-9a-z_-]+\z/'
