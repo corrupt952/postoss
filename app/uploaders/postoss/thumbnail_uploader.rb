@@ -21,6 +21,9 @@ module Postoss
     version :large do
       process resize_to_limit: [1920, 1080]
     end
+    version :masthead do
+      process resize_to_fill: [970, 250]
+    end
   
     def extension_white_list
       %w(jpg jpeg png)
