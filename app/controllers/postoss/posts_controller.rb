@@ -52,7 +52,7 @@ module Postoss
     def post_params
       self.params
           .require(:post)
-          .permit(:id, :category_id, :title, :body, :thumbnail, :thumbnail_cache)
+          .permit(:id, :category_id, :status_id, :title, :body, :thumbnail, :thumbnail_cache)
     end
   end
 end

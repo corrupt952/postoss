@@ -6,6 +6,7 @@ require 'simple_form'
 require 'jquery-rails'
 require 'kaminari'
 require 'carrierwave'
+require 'active_hash'
 
 module Postoss
   class Engine < ::Rails::Engine

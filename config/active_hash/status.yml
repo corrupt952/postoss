@@ -1,0 +1,6 @@
+- id: 0
+  state: draft
+  name: 'Draft'
+- id: 1
+  state: published
+  name: 'Published'

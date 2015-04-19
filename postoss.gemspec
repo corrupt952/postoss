@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rmagick'
   s.add_dependency 'fog-aws'
   s.add_dependency 'global'
+  s.add_dependency 'active_hash'
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec'
