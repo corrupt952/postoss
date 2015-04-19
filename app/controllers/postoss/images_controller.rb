@@ -1,5 +1,5 @@
 module Postoss
-  class ImagesController < ApplicationController
+  class ImagesController < Postoss::ApplicationController
     def index
       @images = Image.all.page(params[:page]).per(params[:per])
     end

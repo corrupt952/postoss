@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    postoss (0.0.5)
+    postoss (0.0.6)
       active_hash
       bootstrap-sass
       carrierwave

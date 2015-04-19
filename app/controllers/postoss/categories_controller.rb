@@ -1,7 +1,7 @@
 require_dependency "postoss/application_controller"
 
 module Postoss
-  class CategoriesController < ApplicationController
+  class CategoriesController < Postoss::ApplicationController
     before_action :set_category!, only: [:edit, :update, :destroy]
 
     def index

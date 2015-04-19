@@ -1,7 +1,7 @@
 require_dependency "postoss/application_controller"
 
 module Postoss
-  class PostsController < ApplicationController
+  class PostsController < Postoss::ApplicationController
     before_action :set_post!, only: [:edit, :update, :destroy]
 
     def index

@@ -1,5 +1,5 @@
 module Postoss
-  class DashboardController < ApplicationController
+  class DashboardController < Postoss::ApplicationController
     def index
       @categories = Category
         .preload(:posts)
