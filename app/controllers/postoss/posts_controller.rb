@@ -22,7 +22,6 @@ module Postoss
       if @post.save
         redirect_to posts_path
       else
-        binding.pry
         render :new
       end
     end
