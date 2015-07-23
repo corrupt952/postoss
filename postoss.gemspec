@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Kazuki Hasegawa"]
   s.email       = ["hasegawa@khasegawa.net"]
   s.homepage    = "https://github.com/corrupt952/postoss"
-  s.summary     = "TODO: Summary of Postoss."
-  s.description = "TODO: Description of Postoss."
+  s.summary     = "Simple post management system."
+  s.description = "Simple post management system."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -34,8 +34,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'active_hash'
 
   s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'factory_girl_rails'
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'pry-rails'
 end
