@@ -13,3 +13,15 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'puma'
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+end
