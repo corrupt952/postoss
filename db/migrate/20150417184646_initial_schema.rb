@@ -32,5 +32,23 @@ class InitialSchema < ActiveRecord::Migration
       t.timestamps null: false
     end
     add_index :postoss_images, :unique_id, unique: true
+
+    create_table :postoss_tags do |t|
+      t.string :name
+
+      t.timestamps null: false
+    end
+    add_index :postoss_tags, :name, unique: true
+
+    create_table :postoss_tag_posts do |t|
+      t.integer :post_id
+      t.integer :tag_id
+
+      t.timestamps null: false
+    end
+    add_index :postoss_tag_posts, :post_id
+    add_index :postoss_tag_posts, :tag_id
+    add_foreign_key :postoss_tag_posts, :postoss_posts, column: :post_id
+    add_foreign_key :postoss_tag_posts, :postoss_tags, column: :tag_id
   end
 end

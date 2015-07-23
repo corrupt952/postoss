@@ -2,6 +2,8 @@ module Postoss
   class Post < ActiveRecord::Base
     extend ActiveHash::Associations::ActiveRecordExtensions
 
+    has_many :tag_posts, inverse_of: :post
+    has_many :tags, through: :tag_posts
     belongs_to :category
 
     belongs_to_active_hash :status, class_name: Postoss::Status.name
