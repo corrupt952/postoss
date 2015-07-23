@@ -13,8 +13,10 @@ class InitialSchema < ActiveRecord::Migration
     create_table :postoss_posts do |t|
       t.string :unique_id, null: false, limit: 16
       t.integer :category_id, null: false
+      t.integer :status_id, null: false, default: 0
       t.string :title, null: false
       t.text :body, null: false
+      t.date :published_date
       t.string :thumbnail
 
       t.timestamps null: false
