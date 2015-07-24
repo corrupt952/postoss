@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723180860) do
+ActiveRecord::Schema.define(version: 20150723182020) do
 
   create_table "postoss_categories", force: :cascade do |t|
     t.string   "name",                             null: false
@@ -36,13 +36,13 @@ ActiveRecord::Schema.define(version: 20150723180860) do
   create_table "postoss_posts", force: :cascade do |t|
     t.string   "unique_id",      limit: 16,             null: false
     t.integer  "category_id",                           null: false
+    t.integer  "status_id",                 default: 0, null: false
     t.string   "title",                                 null: false
     t.text     "body",                                  null: false
+    t.date     "published_date"
     t.string   "thumbnail"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
-    t.integer  "status_id",                 default: 0, null: false
-    t.date     "published_date"
   end
 
   add_index "postoss_posts", ["category_id"], name: "index_postoss_posts_on_category_id"
@@ -63,5 +63,7 @@ ActiveRecord::Schema.define(version: 20150723180860) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "postoss_tags", ["name"], name: "index_postoss_tags_on_name", unique: true
 
 end

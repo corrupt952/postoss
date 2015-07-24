@@ -4,6 +4,11 @@ class @Dispatcher
 
     switch controller
       when 'postoss/posts'
+        $('#post_tag_ids').selectize
+          delimiter: ', '
+          load: (query, callback) ->
+            return callback([]) if !query.length
+            console.log(@)
         new Summernote()
 
 $ ->

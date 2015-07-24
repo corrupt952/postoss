@@ -9,11 +9,13 @@ PATH
       fog-aws
       font-awesome-rails
       global
+      handlebars_assets
       jquery-rails
       kaminari
       rails (~> 4.2.1)
       rmagick
       sass-rails
+      selectize-rails
       simple_form
       summernote-rails
       therubyracer
@@ -88,6 +90,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     fog-aws (0.7.3)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
@@ -113,6 +117,11 @@ GEM
       activesupport (>= 2.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    handlebars_assets (0.20.2)
+      execjs (~> 2.0)
+      multi_json (~> 1.0)
+      sprockets (>= 2.0.0, < 4.0)
+      tilt (~> 1.2)
     i18n (0.7.0)
     ipaddress (0.8.0)
     jquery-rails (4.0.4)
@@ -175,7 +184,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     ref (2.0.0)
-    rmagick (2.15.2)
+    rmagick (2.15.3)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -203,6 +212,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    selectize-rails (0.12.1)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -230,6 +240,7 @@ PLATFORMS
 
 DEPENDENCIES
   factory_girl_rails
+  faker
   postoss!
   pry
   pry-rails

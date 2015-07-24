@@ -12,6 +12,8 @@
 //
 //= require jquery2
 //= require jquery_ujs
+//= require handlebars.runtime
 //= require bootstrap
 //= require summernote
+//= require selectize
 //= require_tree .

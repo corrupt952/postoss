@@ -7,6 +7,8 @@ require 'jquery-rails'
 require 'kaminari'
 require 'carrierwave'
 require 'active_hash'
+require 'selectize-rails'
+require 'handlebars_assets'
 
 module Postoss
   class Engine < ::Rails::Engine

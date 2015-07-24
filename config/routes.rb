@@ -5,4 +5,8 @@ Postoss::Engine.routes.draw do
   resources :posts, except: [:show]
 
   resources :images, only: [:index, :create, :destroy]
+
+  namespace :api, default: { format: :json } do
+    resources :tags, only: [:index, :create]
+  end
 end
